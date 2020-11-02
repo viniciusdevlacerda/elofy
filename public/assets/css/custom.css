@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+    --color-primary: #6D5BD0;
+    --color-secondary: #ffb001;
+    /*Background body*/
+    --bgBody: #F4F2FF;
+    --bgGrey: #999;
+    --bgParent: #F2F0F9;
+
+    /* font  variáveis*/
+    --regular: 400;
+    --light: 300;
+    --medium: 600;
+    --black: 900;
+    --bold: 700;
+    --font-inter: 'Inter', sans-serif;
+    /* cor da font */
+    --fontcolor: #25213B;
+    --fontcolor-variant: #6E6893;
+    --fontcolor-icon: #8B83BA;
+    --fontcolor-stroke: #C6C2DE;
+}
+
+.bg-black{
+    background-color: #000000!important;
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary) !important;
+}
+
+.bg-grey {
+    background-color: var(--bgGrey) !important;
+}
+
+.btn-danger{
+    font-family: var(--font-inter);
+    font-weight: var(--medium);
+    background: #FFE0E0;
+    color: #D30000;
+}
+.btn-success{
+    font-family: var(--font-inter);
+    font-weight: var(--medium);
+    background: #CDFFCD;
+    color: #007F00;
+}
+
+html, body {
+    margin: 0px;
+}
+
+body {
+    font-family: var(--font-inter);
+    font-weight: var(--regular);
+    overflow-x: hidden;
+    background: var(--bgBody);
+}
+
+/*Custom scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #F9F9F9;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 2.5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+/*Fim scrollbar*/
+
+
+/* Configuração de tipos fonts*/
+strong {
+    font-weight: var(--medium);
+}
+
+.strong {
+    font-weight: var(--medium);
+}
+
+.light {
+    font-weight: var(--light);
+}
+
+.medium {
+    font-weight: var(--medium);
+}
+
+.black {
+    font-weight: var(--black);
+}
+.disabled-input{
+    pointer-events: none;
+    background: #9a9a9a;
+}
+.strike{
+    text-decoration: line-through;
+}
+/*Fim config fonts*/
+@media screen and (max-width: 599px) {
+    .btn-xs-block {
+        display: block !important;
+        width: 100%;
+    }
+}
+
+
+/*Logo faculdade wpos svg*/
+.primary {
+    fill: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.secondary {
+    fill: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+/* Fim Logo faculdade wpos svg*/
+
+
+/*custom container width bootstrap*/
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+/*Custom btn*/
+/*primary button*/
+.btn-custom-primary {
+    color: #fff;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    font-weight: var(--regular);
+}
+
+.btn-custom-primary:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-custom-outline-primary {
+    color: var(--color-primary);
+    background-color:transparent;
+    border-color: var(--color-primary);
+    font-weight: var(--regular);
+}
+
+.btn-custom-outline-primary:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+/* Fim primary button*/
+/* Fim custom btn*/
+
+/*utilities*/
+.rounded-50 {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+/*Navbar*/
+
+#navbar-header{
+}
+#navbar-header a{
+    color: var(--fontcolor-variant);
+}
+#navbar-header .navbar-brand img{
+    height: 10vh;
+}
+#navbar-header .nav-link{
+    font-weight: var(--medium);
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+.hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 29px;
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    background-color: var(--color-primary) !important;
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    position: absolute;
+    width: 32px;
+    height: 3px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: var(--color-secondary);
+}
+
+@media screen and (max-width: 599px) {
+    .navbar-collapse {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+
+    .navbar-collapse .navbar-nav .nav-link {
+        padding: 20px 10px;
+    }
+
+    @media (max-width: 768px) {
+        .navbar-collapse {
+            position: fixed;
+            top: 66px;
+            right: 0;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+
+            width: 100%;
+            font-size: 16px;
+            background: rgba(249, 249, 249, 1);
+        }
+
+        .navbar-collapse.collapsing {
+            height: 100vh;
+            -webkit-transition: right 0.3s ease;
+            -o-transition: right 0.3s ease;
+            -moz-transition: right 0.3s ease;
+            transition: right 0.3s ease;
+            right: -100%;
+        }
+
+        .navbar-collapse.show {
+            right: 0;
+            -webkit-transition: right 0.3s ease-in;
+            -o-transition: right 0.3s ease-in;
+            -moz-transition: right 0.3s ease-in;
+            transition: right 0.3s ease-in;
+            background: rgba(249, 249, 249, 1);
+        }
+    }
+}
+
+
+#table-persons{
+    border-radius: 8px;
+    box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+#table-persons .dataTables_filter{
+    width: 50%;
+    margin: 0 0 .5rem 0;
+}
+#table-persons .dataTables_filter input{
+    border: 0;
+   background: #F4F2FF;
+    color: #6E6893;
+}
+#table-persons table thead{
+    background: var(--bgBody);
+    border-color: #6E6893;
+}
+#table-persons table thead th{
+    color: var(--fontcolor-variant);
+    font-size: .9rem;
+}
+#table-persons table tbody{
+    border-color: #6E6893;
+}
+#table-persons table tbody td, #table-persons table tbody th{
+    font-size: .8rem;
+}
+
+@media (max-width:599px){
+    #table-persons .dataTables_filter{
+        width: 100%;
+    }
+}
